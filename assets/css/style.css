@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+
+
+header {
+  background-color: #222;
+  padding: 2em 1em;
+  
+}
+
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.banner {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  background-color: #222;
+}
+
+.top-menu a {
+
+  text-decoration: none;
+}
+
+.top-menu a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+section {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+.music-embed {
+  margin-top: 2em;
+}
+
+footer {
+  background-color: #222;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  max-width: 90vw;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Optional: hides scrollbar */
+}
+
+.scroll-container img {
+  max-height: 200px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.scroll-left,
+.scroll-right {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-left:hover,
+.scroll-right:hover {
+  background-color: #444;
+}
+
+.music-embed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Optional: centers inline content inside */
+}
+
