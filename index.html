@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="/assets/js/scripts.js"></script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Machete Picnic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <title>Machete Picnic | Progressive Hard Rock & Alt-Metal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
+  
+  
 </head>
 <body>
-  <header>
-    <img src="banner.jpg" alt="Machete Picnic Banner" class="banner">
-    <h1>Machete Picnic</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#music">Music</a>
-      <a href="#contact">Contact</a>
-      <a href="shows.html">Shows</a>
-    </nav>
+  <!-- Animated Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo">Machete Picnic</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#music">Music</a>
+        <a href="#live">Shows</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Machete Picnic is a progressive alt-metal band fusing inspired complexity with heavy, melodic grit.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">Machete Picnic</h1>
+    <p class="hero-subtitle">Progressive Hard Rock & Alt-Metal</p>
+    <a href="#music" class="cta-button">Listen Now</a>
   </section>
 
-<section class="scroll-wrapper">
-  <button class="scroll-left">⬅️</button>
-  <div class="scroll-container">
-    <img src="/assets/images/img1.jpg" />
-    <img src="/assets/images/img2.jpg" />
-    <img src="/assets/images/img3.jpg" />
-    <!-- more images -->
-  </div>
-  <button class="scroll-right">➡️</button>
-</section>
-
-  <section id="music">
-    <h2>Listen</h2>
-    <div class="music-embed">
-      <!-- Replace this with your Bandcamp/Spotify embed code -->
-      <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3280971969/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://machetepicnic.bandcamp.com/album/failure-in-three-parts">Failure in Three Parts by Machete Picnic</a></iframe>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Machete Picnic is a progressive hard rock & alt-metal band that tests the boundaries of modern heavy music.</p>
+        <p>Fusing accessible complexity with heavy, melodic grit, we create a sonic assault that's both cerebral and visceral. Our sound draws from the best of progressive and alternative heavy music while carving out our own unique space in the genre.</p>
+        <div class="influences">
+          <span class="influence-tag">QOTSA</span>
+          <span class="influence-tag">Rush</span>
+          <span class="influence-tag">Megadeth</span>
+          <span class="influence-tag">Faith No More</span>
+          <span class="influence-tag">Turnstile</span>
+        </div>
+      </div>
+      <div class="band-members">
+        <h3 style="color: var(--primary); margin-bottom: 2rem;">The Band</h3>
+        <div class="member">
+          <div class="member-name">Devon Summers</div>
+          <div class="member-role">Guitars, Vocals, Synths</div>
+        </div>
+        <div class="member">
+          <div class="member-name">Aaron Nichols</div>
+          <div class="member-role">Drums</div>
+        </div>
+        <div class="member">
+          <div class="member-name">Masashi Kobayashi</div>
+          <div class="member-role">Bass Guitar (Recording)</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:machetepicnic@gmail.com">machetepicnic@gmail.com</a></p>
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-item">
+          <img src="/assets/images/mp_whitesuit.jpg" alt="Band Photo 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Machete Picnic Studio.jpg" alt="Studio Session" />
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/aaron_live.jpg" alt="Aaron Live" />
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/masa_live.jpg" alt="Masa Live" />
+        </div>
+      </div>
+      <div class="gallery-controls">
+        <button class="gallery-btn" onclick="scrollGallery(-1)">←</button>
+        <button class="gallery-btn" onclick="scrollGallery(1)">→</button>
+      </div>
+    </div>
   </section>
 
+  <!-- Music Section -->
+  <section id="music">
+    <h2>Listen</h2>
+    <div class="music-players">
+      <div class="music-embed">
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">Latest Release</h3>
+        <iframe style="border: 0; width: 100%; height: 120px;" 
+                src="https://bandcamp.com/EmbeddedPlayer/album=3280971969/size=large/bgcol=1a1a1a/linkcol=00ffcc/tracklist=false/artwork=small/transparent=true/" 
+                seamless>
+          <a href="https://machetepicnic.bandcamp.com/album/failure-in-three-parts">Failure in Three Parts by Machete Picnic</a>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Shows Section -->
+  <section id="live">
+    <h2>Upcoming Shows</h2>
+    <table class="shows-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>City</th>
+          <th>Venue</th>
+          <th>Time</th>
+          <th>Tickets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sep 16, 2025</td>
+          <td>Seattle, WA</td>
+          <td>Tractor Tavern</td>
+          <td>7:00 PM Doors</td>
+          <td><a href="#" class="ticket-btn">Get Tickets</a></td>
+        </tr>
+        <tr>
+          <td>Dec 03, 2025</td>
+          <td>Seattle, WA</td>
+          <td>Sunset Tavern</td>
+          <td>7:00 PM</td>
+          <td><a href="#" class="ticket-btn">TBD</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-content">
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Get in touch for bookings, press inquiries, or just to say hey.</p>
+      <p style="font-size: 1.1rem;">
+        <a href="mailto:machetepicnic@gmail.com" style="color: var(--primary); text-decoration: none;">machetepicnic@gmail.com</a>
+      </p>
+      <div class="contact-links">
+        <a href="https://www.instagram.com/machetepicnicband/" class="contact-link" title="Instagram">📷</a>
+        <a href="https://www.facebook.com/machetepicnic" class="contact-link" title="Facebook">f</a>
+        <a href="https://machetepicnic.bandcamp.com/" class="contact-link" title="Bandcamp">♫</a>
+        <!--<a href="#" class="contact-link" title="YouTube">▶</a>-->
+        <!--<a href="#" class="contact-link" title="Spotify">♫</a>-->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Machete Picnic. All rights reserved.
+    <p>&copy; 2025 Machete Picnic. All rights reserved.</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">Forged in the Pacific Northwest</p>
   </footer>
+<script src="/assets/js/scripts.js"></script>
+
 </body>
 </html>
+
