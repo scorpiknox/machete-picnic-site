@@ -2,7 +2,7 @@
     
     const galleryImages = [
       {
-        src: '/assets/images/mp_whitesuit.jpg',
+        src: '/assets/images/devon_live.jpg',
         alt: 'Devon Live'
       },
       {
