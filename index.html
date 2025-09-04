@@ -6,8 +6,6 @@
   <title>Machete Picnic | Progressive Hard Rock & Alt-Metal</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
-  
-  
 </head>
 <body>
   <!-- Animated Particles -->
@@ -39,7 +37,7 @@
     <div class="about-content">
       <div class="about-text">
         <p>Machete Picnic is a progressive hard rock & alt-metal band that tests the boundaries of modern heavy music.</p>
-        <p>Fusing accessible complexity with melody and groove, we draws inspiration from the best of progressive and alternative heavy music while carving out our own unique space across genres.</p>
+        <p>Fusing accessible complexity with heavy, melodic grit, we create a sonic assault that's both cerebral and visceral. Our sound draws from the best of progressive and alternative heavy music while carving out our own unique space in the genre.</p>
         <div class="influences">
           <span class="influence-tag">QOTSA</span>
           <span class="influence-tag">Rush</span>
@@ -71,17 +69,17 @@
     <h2>Gallery</h2>
     <div class="gallery-container">
       <div class="gallery-track" id="galleryTrack">
-        <div class="gallery-item">
-          <img src="/assets/images/mp_whitesuit.jpg" alt="Band Photo 1" />
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="/assets/images/mp_whitesuit.jpg" float="top" alt="Devon Live" class="crop-top" />
         </div>
-        <div class="gallery-item">
-          <img src="/assets/images/Machete Picnic Studio.jpg" alt="Studio Session" />
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="/assets/images/Machete Picnic Studio.jpg" alt="Studio Session" class="crop-top"/>
         </div>
-        <div class="gallery-item">
-          <img src="/assets/images/aaron_live.jpg" alt="Aaron Live" />
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="/assets/images/aaron_live.jpg" alt="Aaron Live" class="crop-slight-top"/>
         </div>
-        <div class="gallery-item">
-          <img src="/assets/images/masa_live.jpg" alt="Masa Live" />
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="/assets/images/masa_live.jpg" alt="Masa Live" class="crop-slight-top" />
         </div>
       </div>
       <div class="gallery-controls">
@@ -90,6 +88,16 @@
       </div>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">←</button>
+      <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">→</button>
+    </div>
+  </div>
 
   <!-- Music Section -->
   <section id="music">
@@ -125,7 +133,7 @@
           <td>Seattle, WA</td>
           <td>Tractor Tavern</td>
           <td>7:00 PM Doors</td>
-          <td><a href="https://www.ticketweb.com/event/war-puppy-secretskill-machete-picnic-tractor-tickets/13904594?pl=tractor" class="ticket-btn">Get Tickets</a></td>
+          <td><a href="#" class="ticket-btn">Get Tickets</a></td>
         </tr>
         <tr>
           <td>Dec 03, 2025</td>
@@ -150,8 +158,6 @@
         <a href="https://www.instagram.com/machetepicnicband/" class="contact-link" title="Instagram">📷</a>
         <a href="https://www.facebook.com/machetepicnic" class="contact-link" title="Facebook">f</a>
         <a href="https://machetepicnic.bandcamp.com/" class="contact-link" title="Bandcamp">♫</a>
-        <!--<a href="#" class="contact-link" title="YouTube">▶</a>-->
-        <!--<a href="#" class="contact-link" title="Spotify">♫</a>-->
       </div>
     </div>
   </section>
@@ -161,8 +167,7 @@
     <p>&copy; 2025 Machete Picnic. All rights reserved.</p>
     <p style="margin-top: 1rem; font-size: 0.9rem;">Seattle, WA</p>
   </footer>
-<script src="/assets/js/scripts.js"></script>
 
+<script src="/assets/js/scripts.js"></script>
 </body>
 </html>
-
